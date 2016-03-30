@@ -2,7 +2,8 @@ html
   head
     title Plivo Demo Guestbook
   body
-    h1 Add new entry
+    h1= 'On server ' + hostname
+    h2 Add new entry
     form(action='/new', method="post")
       div.input
           div.label Name
@@ -12,7 +13,7 @@ html
           textarea(name="content")
       div.actions
           input(type="submit", value="add")
-    h1 Guestbook Entries
+    h2 Guestbook Entries
     ul
       each obj, index in rows
         li= obj.name + ': ' + obj.content
