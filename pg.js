@@ -7,7 +7,7 @@ client.connect(function(err) {
   if(err) {
     return console.error('could not connect to postgres', err);
   }
-  client.query('SELECT NOW() AS "theTime"', function(err, result) {
+  client.query('CREATE TABLE "public"."guestbook" ("id" serial,"name" text,"content" text,PRIMARY KEY ("id"));', function(err, result) {
     if(err) {
       return console.error('error running query', err);
     }

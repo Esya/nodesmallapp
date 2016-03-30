@@ -1,0 +1,6 @@
+default:
+  user: esya
+  password: test
+  host: localhost
+  db: postgres
+  serverPort: 80
